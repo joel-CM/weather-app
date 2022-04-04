@@ -1,0 +1,41 @@
+.container {
+  width: 20rem;
+  max-width: 20rem;
+  height: 300px;
+  max-height: 300px;
+  border: 1px solid #000;
+  border-radius: 10px;
+  margin: 5px;
+  background: #f0f9ec;
+  cursor: pointer;
+}
+
+.title {
+  font-size: 1.5rem;
+  padding: 5px 10px;
+  margin: 10px;
+  text-align: center;
+  background: #6eb83d;
+  color: #143913;
+  border-radius: 10px;
+}
+
+.info,
+.imgContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info,
+.imgContent {
+  margin: 20px 0;
+}
+.info p {
+  margin: 0 5px;
+}
+
+.imgContent img {
+  width: 10rem;
+  border-radius: 10px;
+}

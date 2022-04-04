@@ -1,0 +1,42 @@
+.icon,
+.loadingIcon {
+  height: 2rem;
+  width: 3rem;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.button {
+  display: block;
+  border: none;
+  outline: none;
+  height: 2rem;
+  background: #f0f9ec;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loadingIcon {
+  animation-name: rotate;
+  animation-timing-function: linear;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@media (max-width: 600px) {
+  .icon,
+  .loadingIcon {
+    height: 1.5rem;
+    padding: 5px;
+  }
+  .button {
+    height: 1.5rem;
+  }
+}

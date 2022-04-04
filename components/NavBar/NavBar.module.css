@@ -1,0 +1,47 @@
+.container {
+  background-color: #6eb83d;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "logo navbar";
+  margin-bottom: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* grillas */
+.containerLogo {
+  grid-area: logo;
+}
+.containerMenu {
+  grid-area: navbar;
+  justify-self: end;
+  align-self: center;
+}
+
+/* contenidos */
+.title {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding: 5px 20px;
+  background: #6eb83d;
+  color: #f0f9ec;
+}
+
+/* --------- responsive */
+@media (max-width: 600px) {
+  .container {
+    grid-template-areas:
+      "logo logo"
+      "navbar navbar";
+  }
+  .containerLogo {
+    justify-self: center;
+  }
+  .containerMenu {
+    justify-self: center;
+    margin-bottom: 1rem;
+  }
+}
