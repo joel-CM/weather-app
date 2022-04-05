@@ -8,7 +8,11 @@ export default function NavBar() {
   return (
     <div className={style.container}>
       <div className={style.containerLogo}>
-        <button className={style.title} onClick={() => router.push("/")}>
+        <button
+          title="Inicio/Home"
+          className={style.title}
+          onClick={() => router.push("/")}
+        >
           Weather App
         </button>
       </div>

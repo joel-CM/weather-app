@@ -17,6 +17,39 @@
   border-bottom-left-radius: 15px;
 }
 
+.reload {
+  height: 2rem;
+  display: flex;
+  align-items: center;
+}
+.reloadIcon,
+.rotate {
+  color: #f0f9ec;
+  font-size: 1.5rem;
+  margin: 0 10px;
+  cursor: pointer;
+  transition-duration: 0.5s;
+}
+.reloadIcon:hover {
+  transform: rotate(180deg);
+}
+
+@keyframes rotar {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.rotate {
+  /* animation-name: rotar;
+  animation-timing-function: linear;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite; */
+  animation: rotar linear 0.5s infinite;
+}
+
 /* ---------------responsive */
 @media (max-width: 600px) {
   .input {

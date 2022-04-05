@@ -5,6 +5,8 @@ import { useSelector, useDispatch } from "react-redux";
 import Card from "../components/Card/Card";
 // actions
 import { restoreError } from "../store/actions";
+// icons{
+import { BsEmojiFrown } from "react-icons/bs";
 
 export default function Index() {
   const dispatch = useDispatch();
@@ -21,16 +23,18 @@ export default function Index() {
   return (
     <div className={style.container}>
       {!cities.length && (
-        <h2 className={style.noSearches}>No searches yet...</h2>
+        <h2 className={style.noSearches}>
+          Without results <BsEmojiFrown className={style.noSearchesIcon} />
+        </h2>
       )}
       {cities?.map((e) => (
         <Card
-          key={e.request.query}
-          id={e.request.query}
-          name={e.location.name}
-          img={e.current.weather_icons[0]}
-          temp={e.current.temperature}
-          description={e.current.weather_descriptions[0]}
+          key={e._id}
+          id={e._id}
+          name={e.name}
+          province={e.province}
+          temp={e.weather.temp}
+          description={e.weather.description}
         />
       ))}
     </div>
